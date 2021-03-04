@@ -1,0 +1,599 @@
+/*Global section*/
+@font-face { 
+    font-family: 'NIXGONL-Vb'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONL-Vb.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face { 
+    font-family: 'MapoGoldenPier'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: 'NIXGONL-Vb'; 
+    overflow: hidden;
+}
+
+.container{
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+
+/*header section*/
+header{
+    height: 15vh;
+    padding-bottom: .5vh;
+    border-bottom: .75px black solid;
+    
+}
+header .box{
+    height: 8vh;
+    padding-top: 1%;
+}
+
+header .box h1{
+    font-family: 'MapoGoldenPier'; 
+    text-align: center;
+    font-size: 4vh;
+    padding:0;
+    margin:0;
+    padding-top: 5px;
+}
+
+header nav{
+    font-size: 2.75vh;
+    text-transform: uppercase;
+    width: 100vw;
+    height: 5vh;
+}
+
+header ul{
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    width:fit-content;
+    text-align:justify;
+    word-spacing:5vw;
+    margin: auto;
+    margin-top: .25%;
+}
+
+header li{
+    display: inline;
+}
+
+a{
+    color: black;
+    font-weight: 900px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+  
+a:hover, a:active {
+    color: rgb(176, 118, 199);
+}
+#logo:hover{
+    color: rgb(0, 0, 0);
+}
+header #intro{
+    height: 0px;
+    overflow: hidden;
+}
+
+
+
+/*project showcase section*/
+
+.scroll{
+    overflow-y: auto;
+    height: 85vh;
+    
+}
+
+#project1, #project2, #project3{
+    border: none;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+#project1 .main, #project2 .main, #project3 .main {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(10px);
+  }
+  
+
+#project1 .overlay, #project2 .overlay, #project3 .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .35s ease;
+    background-color: rgb(197, 197, 197);
+   
+}
+
+#project1 h1, #project2 h1, #project3 h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 4vh;
+    color: rgb(0, 0, 0);
+    border: black 1.5px solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+#project1 h1 p, #project2 h1 p, #project3 h1 p{
+   text-align: center;
+   margin-bottom: 0px;
+   margin-top: 20px;
+   font-size: 3vh;
+}
+
+#project1:hover .overlay, #project2:hover .overlay, #project3:hover .overlay{
+    opacity: 40%; 
+}
+
+#project1:hover h1, #project2:hover h1, #project3:hover h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 4.05vh;
+    color: rgb(0, 0, 0);
+    border: black 2px solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/*blog page*/
+#about{
+    height: 82vh;
+    width:100vw;
+   
+}
+
+#about .title{
+    font-family: 'MapoGoldenPier'; 
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+#about .post{
+    text-align: left;
+    padding-top: 1%;
+    padding-bottom: .5%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+#about p{
+    font-family: 'MapoGoldenPier'; 
+    font-size: large;
+    line-height: 300%;
+}
+
+#about #preview{
+    width: 50vw;
+    height: 50vh;
+    margin-left: 25vw;
+    padding-bottom: 5%;
+}
+
+#about iframe{
+    width: 100%;
+    height: 100%;
+    border: 2.25px black solid;
+    
+}
+
+
+.post ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.post a{ 
+    font-size: 30px;
+}
+
+.post_contact{
+    padding-top: 1%;
+    padding-bottom: .5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_header h1{
+    margin-top: 4.5%;
+    text-align: left;
+    margin-left: 25%;
+    font-size: 30px;
+}
+
+.img_logo{
+    height:150px;
+    border-radius: 2vw;
+}
+
+.text{
+    margin-top: 2vw;
+    font-size: 30px;
+    text-align: center;
+}
+
+.logos:hover{
+    transition: .2s;
+    transform: scale(1.075);
+}
+
+
+/*width 872이하로 다*/
+@media only screen and (max-width: 872px){
+header{
+        height: 10vh;
+}   
+header .box{
+    padding-bottom: 0;
+    margin-bottom: -4%;
+}
+header .box h1{
+    font-size: 2.5vh;
+}
+
+header nav{
+      font-size: 2vh;
+      text-transform: uppercase;
+      width: 100vw;
+      height: 4vh;
+      
+}
+    
+header ul{
+      padding: 0;
+      font-family: 'Raleway', sans-serif;
+      width:fit-content;
+      text-align:justify;
+      word-spacing:4vw;
+      margin: auto;
+      margin-top: .25%;
+}
+    
+#project1, #project2, #project3{
+    border: none;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+#project1 h1, #project2 h1, #project3 h1{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 2vh;
+    color: rgb(0, 0, 0);
+    border: black .8px solid;
+    padding: 10px;
+}
+
+#project1 h1 p, #project2 h1 p, #project3 h1 p{
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    font-size: 1.5vh;
+ }
+
+#project1:hover h1, #project2:hover h1, #project3:hover h1{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 2vh;
+    color: rgb(0, 0, 0);
+    border: black .8px solid;
+    padding: 10px;
+    transition: .2s;
+    background-color: rgba(191, 224, 221, 0.678);
+}
+
+/*blog page*/
+
+#about .title{
+    padding-top: 2%;
+    padding-bottom: 1%;
+    font-size: .7em;
+}
+
+#about .post{
+    padding-top: 1%;
+    padding-bottom: .5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#about p{ 
+    font-size: small;
+    line-height: 180%;
+}
+
+#about #preview{
+    width: 80vw;
+    height: 22.5vh;
+    margin-left: 10vw;
+    padding-bottom: 2%;
+    margin-bottom: 0%;
+}
+
+#about iframe{
+    width: 100%;
+    height: 100%;
+    border: 2.25px black solid;
+}
+
+    /*contact page*/
+    
+    .post_contact{
+    margin-left: 15%;
+    margin-right: 15%;
+    }
+
+    .contact_header h1{
+        margin-top: 5%;
+        margin-left: 15%;
+        font-size: 15px;
+    }
+
+    .img_logo{
+        margin-top: 5%;
+        height:50px;
+    }
+
+    .text{
+        margin-top: 2vw;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-height: 500px){
+    header{
+            height: 15vh;
+    }   
+    header .box{
+        padding-bottom: 0;
+        margin-bottom: -3%;
+        height: 8vh;
+    }
+    header .box h1{
+        font-size: 3.5vh;
+    }
+    
+    header nav{
+          font-size: 3vh;
+          text-transform: uppercase;
+          width: 100vw;
+          height: 6vh;
+          margin-top: 5vh;
+    }
+        
+    header ul{
+          padding: 0;
+          font-family: 'Raleway', sans-serif;
+          width:fit-content;
+          text-align:justify;
+          word-spacing:4vw;
+          margin: auto;
+          margin-top: .25%;
+    }
+        
+    #project1, #project2, #project3{
+        border: none;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #project1 h1, #project2 h1, #project3 h1{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        font-size: 4vh;
+        color: rgb(0, 0, 0);
+        border: black .8px solid;
+        padding: 10px;
+    }
+    
+    #project1 h1 p, #project2 h1 p, #project3 h1 p{
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+        font-size: 3.5vh;
+     }
+    
+    #project1:hover h1, #project2:hover h1, #project3:hover h1{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        font-size: 4vh;
+        color: rgb(0, 0, 0);
+        border: black .8px solid;
+        padding: 10px;
+        transition: .2s;
+        background-color: rgba(191, 224, 221, 0.678);
+    }
+
+        
+    /*blog page*/
+
+    #about #preview{
+        width: 80vw;
+        height: 80vh;
+    }
+    
+}
+
+/*tablets*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #about #preview{
+        width: 80vw;
+        height: 30vh;
+    }
+    .contact_header h1{
+        margin-top: 4%;
+        margin-left: 25%;
+        font-size: 30px;
+    }
+
+    .img_logo{
+        height:100px;
+    }
+
+    .text{
+        margin-top: 2vw;
+        font-size: 17.5px;
+    }
+  }
+  
+  @media (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
+    #about #preview{
+        width: 80vw;
+        height: 30vh;
+    }
+        
+    .contact_header h1{
+        margin-top: 4%;
+        margin-left: 25%;
+        font-size: 30px;
+    }
+
+    .img_logo{
+        height:100px;
+    }
+
+    .text{
+        margin-top: 2vw;
+        font-size: 17.5px;
+    }
+
+     /*contact page*/
+    
+     .post_contact{
+        margin-left: 15%;
+        margin-right: 15%;
+        }
+    
+        .contact_header h1{
+            margin-top: 5%;
+            margin-left: 15%;
+            font-size: 30px;
+        }
+    
+        .img_logo{
+            margin-top: 5%;
+            height:100px;
+        }
+    
+        .text{
+            margin-top: 2vw;
+            font-size: 20px;
+        }
+
+  }
+
+  @media (orientation: landscape) and (min-width: 900px) and (max-width: 1400px) {
+    #about .post{
+        text-align: left;
+        padding-top: 0%;
+        padding-bottom: .5%;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    
+    #about #preview{
+        width: 80vw;
+        height: 55vh;
+        margin-left: 10vw;
+    }
+        
+    .contact_header h1{
+        margin-top: 2.5%;
+        text-align: left;
+        margin-left: 25%;
+        font-size: 30px;
+    }
+
+    .img_logo{
+        height:130px;
+        border-radius: 2vw;
+    }
+
+    .text{
+        margin-top: 2vw;
+        font-size: 30px;
+        text-align: center;
+    }
+    /*contact page*/
+        
+    .post_contact{
+        margin-left: 15%;
+        margin-right: 15%;
+        }
+
+        .contact_header h1{
+            margin-top: 5%;
+            margin-left: 15%;
+            font-size: 30px;
+        }
+
+        .img_logo{
+            margin-top: 5%;
+            height:100px;
+        }
+
+        .text{
+            margin-top: 2vw;
+            font-size: 20px;
+        }
+  }
+
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+    #about .post{
+        text-align: left;
+        padding-top: 0%;
+        padding-bottom: .5%;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    
+    #about #preview{
+        width: 80vw;
+        height: 35vh;
+        margin-left: 10vw;
+    }
+}
